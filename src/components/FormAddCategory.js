@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Input from './Input';
-import { changeCategoryType, addCategory, closeForm, openForm } from '../redux/actions/actions';
+import { changeCategoryType, addCategory, openForm } from '../redux/actions/actions';
 
 class FormAddCategory extends React.Component {
     render() {

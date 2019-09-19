@@ -9,8 +9,6 @@ import FormEditNote from './FormEditNote';
 class Popup extends React.Component {
     render() {
         const {activeForm, form} = this.props;
-        let id = '';
-        if(activeForm) id = activeForm.id;
 
         return (
             <div className={(activeForm) ? 'popup active ' : 'popup'}>         

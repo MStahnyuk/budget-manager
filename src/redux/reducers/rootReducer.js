@@ -32,7 +32,6 @@ const initialState = {
 };
 
 function editObj(obj, field, value) {
-    console.log('obj, field, value', obj, field, value);
     obj[field] = value;
     return obj;
 }
@@ -161,7 +160,6 @@ export default function rootReducer(state = initialState, action) {
             };
 
         case CHANGE_CATEGORY_TYPE:
-            console.log(action.payload.arrayChange);
             return {
                 ...state,
                 [action.payload.arrayChange]: 
