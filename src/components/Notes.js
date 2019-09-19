@@ -9,7 +9,7 @@ class Notes extends React.Component {
         const {notes, activeCategory, currency} = this.props;
         let total = 0;
         if(activeCategory) {
-            let notesActive = notes.filter(item => (item.categoryId == activeCategory.id));
+            let notesActive = notes.filter(item => (+item.categoryId === +activeCategory.id));
             return (
                 <React.Fragment>
                     <h2>Notes from category "{activeCategory.value}" ({activeCategory.type})</h2>                    
@@ -27,13 +27,14 @@ class Notes extends React.Component {
         }
 
         return (
-            <div>Категория не выбрана!</div>
+            <div class="warning">Select a category to continue</div>
         )
         
     }
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state) {    
+    localStorage["notes"] = JSON.stringify(state.notes);  
     return {
         activeCategory: state.categories.slice().filter(item => item.active)[0],
         notes: state.notes,

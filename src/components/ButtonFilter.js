@@ -1,12 +1,14 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 import { filter } from '../redux/actions/actions';
 
 class ButtonFilter extends React.Component {
     render() {
-        const { title, active, id} = this.props.button;
+        const { title, active, id } = this.props.button;
         return (
-                <button className={'filterButton active-' + active} onClick={() => this.props.onClick(id)}>{title}</button>
+            <button className={'filterButton active-' + active} onClick={() => this.props.onClick(id)}>
+                {title}
+            </button>
         )
     }
 }

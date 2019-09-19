@@ -1,11 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import ButtonFilter from './ButtonFilter';
-import { deleteCompleted } from '../redux/actions/actions';
 
 class SwichPanel extends React.Component {
     render() {
-        const {itemsLeft, buttonsFilter, disabled, view, total} = this.props;
+        const {buttonsFilter, view} = this.props;
         return (
             <div className={"switchPanel view-" + view}>
                 <div className="buttons">
@@ -23,10 +22,4 @@ function mapStateToProps(state) {
     }
 }
 
-function mapDispatchToProps(dispatch) {
-    return {
-        
-    }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(SwichPanel);
+export default connect(mapStateToProps)(SwichPanel);

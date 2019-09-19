@@ -3,10 +3,10 @@ import Main from "./Main";
 import Aside from "./Aside";
 
 export function Section() {
-    return(
+    return (
         <section>
-            <Aside/>
-            <Main/>
+            <Aside />
+            <Main />
         </section>
     );
 }

@@ -8,17 +8,27 @@ import FormEditNote from './FormEditNote';
 
 class Popup extends React.Component {
     render() {
-        const {activeForm, form, onCloseForm} = this.props;
+        const {activeForm, form} = this.props;
         let id = '';
         if(activeForm) id = activeForm.id;
 
         return (
             <div className={(activeForm) ? 'popup active ' : 'popup'}>         
                 <div className="formWrapper">
-                <FormAddCategory form={form('formAddCategory')} active={(activeForm && activeForm.id === 'formAddCategory') ? 'active ': ''}/>
-                <FormAddNote form={form('formAddNote')} active={(activeForm && activeForm.id === 'formAddNote') ? 'active ': ''}/>
-                <FormEditCategory form={form('formEditCategory')} active={(activeForm && activeForm.id === 'formEditCategory') ? 'active ': ''}/> 
-                <FormEditNote form={form('formEditNote')} active={(activeForm && activeForm.id === 'formEditNote') ? 'active ': ''}/> </div>  
+
+                    <FormAddCategory form={form('formAddCategory')} 
+                    active={(activeForm && activeForm.id === 'formAddCategory') ? 'active ': ''}/>
+
+                    <FormAddNote form={form('formAddNote')} 
+                    active={(activeForm && activeForm.id === 'formAddNote') ? 'active ': ''}/>
+
+                    <FormEditCategory form={form('formEditCategory')} 
+                    active={(activeForm && activeForm.id === 'formEditCategory') ? 'active ': ''}/> 
+
+                    <FormEditNote form={form('formEditNote')} 
+                    active={(activeForm && activeForm.id === 'formEditNote') ? 'active ': ''}/>
+
+                </div>  
             </div>
         )
     }
@@ -38,6 +48,5 @@ function mapDispatchToProps(dispatch) {
         onCloseForm: (formId) => dispatch(closeForm(formId)),
     }
 }
-
 
 export default connect(mapStateToProps, mapDispatchToProps)(Popup)

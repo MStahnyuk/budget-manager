@@ -5,31 +5,12 @@ import { Section } from './components/Section';
 import Popup from './components/Popup';
 
 function App() {
-	return (
+return    (
 		<React.Fragment>
-			{/* 
-          </Header>
-          <section>    
-              </Aside>
-                  </AddButton>
-                  </CategoriesList>                
-                      </CategoryItem>
-                  </SwitchPanel>
-
-              </Main>
-                  </AddButton>
-                  <NotesList>
-                      </NoteItem>
-                  </SwitchPanel>
-          </section>
-          </Footer>
-		   */}
 		    <Header/>
 			<Section/>
             <Footer/>
-            <Popup/>       
-
-
+            <Popup/>
 		</React.Fragment>
 
 	);
