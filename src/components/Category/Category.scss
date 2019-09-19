@@ -1,0 +1,61 @@
+.category {
+  padding-left: 40px;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 2px solid #ededed;
+  }
+
+  &:after {
+    content: "\f00c";
+    font-family: "FontAwesome";
+    position: absolute;
+    left: 9px;
+    top: 8px;
+    font-size: 19px;
+    display: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.income {
+    &:hover,
+    &.active {
+      &:before {
+        border-color: #bddad5;
+      }
+    }
+    &:after {
+      color: #5dc2af;
+    }
+  }
+
+  &.expenses {
+    &:hover,
+    &.active {
+      &:before {
+        border-color: rgba(175, 47, 47, 0.25);
+      }
+    }
+    &:after {
+      color: rgba(175, 47, 47, 0.5);
+    }
+  }
+
+  &.active {
+    text-decoration: underline;
+    &:after {
+      display: block;
+    }
+  }
+}

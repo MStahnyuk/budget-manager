@@ -1,0 +1,11 @@
+select {
+  line-height: 2;
+  height: 28px;
+  padding-left: 8px;
+
+  option {
+    height: 28px;
+    border-bottom: 1px solid #777;
+    line-height: 30;
+  }
+}

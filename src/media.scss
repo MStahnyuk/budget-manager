@@ -1,0 +1,44 @@
+@media screen and (max-width: 800px) {
+  aside {
+    width: 260px;
+  }
+  .container {
+    padding-left: 270px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  body {
+    margin: 0;
+  }
+  aside {
+    position: relative;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+  .container {
+    padding: 0 !important;
+  }
+
+  section {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+
+  main {
+    margin-top: 20px;
+  }
+
+  h1 {
+    margin: 20px 0 20px 0;
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+}
