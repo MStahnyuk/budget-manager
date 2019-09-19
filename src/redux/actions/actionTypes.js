@@ -1,0 +1,14 @@
+export const OPEN_FORM = 'OPEN_FORM';
+export const CLOSE_FORM = 'CLOSE_FORM';
+export const CHANGE_INPUT = 'CHANGE_INPUT';
+export const CHANGE_CATEGORY_TYPE = 'CHANGE_CATEGORY_TYPE';
+export const ADD_CATEGORY = 'ADD_CATEGORY';
+export const REMOVE_CATEGORY = 'REMOVE_CATEGORY';
+export const FILTER = 'FILTER';
+export const CHANGE_CATEGORY_ACTIVE = 'CHANGE_CATEGORY_ACTIVE';
+export const REMOVE_NOTE = 'REMOVE_NOTE';
+export const ADD_NOTE = 'ADD_NOTE';
+export const CHANGE_SELECT = 'CHANGE_SELECT';
+export const CHANGE_IS_EDIT = 'CHANGE_IS_EDIT';
+
+
