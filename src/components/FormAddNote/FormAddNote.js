@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Select from '../Select/Select';
-import { addNote, openForm } from '../../redux/actions/actions';
+import { addNote, closeForm } from '../../redux/actions/actions';
 import Input from '../Input/Input';
 
 class FormAddNote extends React.Component {
@@ -49,11 +49,11 @@ function mapDispatchToProps(dispatch) {
         onCreateNote: (event, title, value, select, categoryType, formId) => {
             event.preventDefault();
             dispatch(addNote({ title, value, select, categoryType }));
-            dispatch(openForm(formId));
+            dispatch(closeForm(formId));
         },
         onCloseForm: (event, formId) => {
             event.preventDefault();
-            dispatch(openForm(formId))
+            dispatch(closeForm(formId))
         },
     }
 }

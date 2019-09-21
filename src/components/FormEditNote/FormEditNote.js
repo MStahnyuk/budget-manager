@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Select from '../Select/Select';
-import { addNote, changeIsEdit, openForm } from '../../redux/actions/actions';
+import { addNote, changeIsEdit, closeForm } from '../../redux/actions/actions';
 import Input from '../Input/Input';
 
 class FormEditNote extends React.Component {
@@ -55,7 +55,7 @@ function mapDispatchToProps(dispatch) {
         onCloseForm: (event, arrayEdit, itemId, formId) => {
             event.preventDefault();
             dispatch(changeIsEdit({ arrayEdit, id: itemId }));
-            dispatch(openForm(formId));
+            dispatch(closeForm(formId));
         },
     }
 }

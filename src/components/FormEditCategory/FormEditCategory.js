@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Input from '../Input/Input';
-import { changeCategoryType, changeIsEdit, openForm } from '../../redux/actions/actions';
+import { changeCategoryType, changeIsEdit, closeForm } from '../../redux/actions/actions';
 
 class FormEditCategory extends React.Component {
     render() {
@@ -54,7 +54,7 @@ function mapDispatchToProps(dispatch) {
         onCloseForm: (event, arrayEdit, itemId, formId) => {
             event.preventDefault();
             dispatch(changeIsEdit({ arrayEdit, id: itemId }));
-            dispatch(openForm(formId));
+            dispatch(closeForm(formId));
         },
         onRadioChange: (event, arrayChange, fieldChange, itemId) => {
             dispatch(changeCategoryType({ arrayChange: arrayChange, newValue: event.target.value, fieldChange, itemId }))
